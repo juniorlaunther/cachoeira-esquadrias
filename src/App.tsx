@@ -155,6 +155,12 @@ export default function App() {
           "fixed inset-0 bg-brand-blue z-40 flex flex-col items-center justify-center gap-8 transition-transform duration-500 md:hidden",
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         )}>
+          <button 
+            className="absolute top-5 right-4 text-white p-2"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <X size={32} />
+          </button>
           {['Início', 'Serviços', 'Diferenciais', 'Sobre', 'Contato'].map((item) => (
             <a 
               key={item} 
